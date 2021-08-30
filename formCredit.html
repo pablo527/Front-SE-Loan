@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body onload="script()">
+  <div class='spinner-wrapper'>
+    <div class="spinner"></div>
+</div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="descuento.html">Formulario credito</a>
@@ -40,6 +43,8 @@
                    <div class="form-group col-md-4">
                      <label for="">Edad</label>
                      <input type="text" class="form-control mb-4" id="age">
+                     <br>
+                     
                      <label for="">Tipo actividad</label>
                      <select  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="typeActivity" onchange="verifyActivity()">
                       <option value="0"></option>
@@ -49,6 +54,8 @@
                       <option value="4">Desempleado</option>
                     </select>
                     <br>
+                    <br>
+
                      <label for="">Contacto</label>
                      <input type="text" class="form-control mb-4" id="contact">
                      <label for="" id="lblQuota">Cupo Acumulado</label>
@@ -119,8 +126,8 @@
 
            <br> 
        </div>
-   </div>          
-      
+   </div>         
+</script>   
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="js/userInterface.js"></script>
     <script src="js/createSimulation.js"></script>

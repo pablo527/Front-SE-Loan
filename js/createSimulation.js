@@ -23,16 +23,14 @@ function createJson(name, surname, cc, age,card, activity,typeContract,month,typ
     };
 
     var jsonString = JSON.stringify(credit);
-    var url='';
+    var url='http://localhost:8080/sendCredit';
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
     console.log(credit);
 
-    
-    axios.post("http://localhost:8080/sendCredit", credit).then((result) => {
-      console.log(result.data);
-      if (result.data == false){
-        alert("Su crédito ha sido rechazado");
-      } else {
-        alert("Su crédito ha sido Aprovado");
-      }
-    })
+    setTimeout(()=>{
+      axios.post(url, credit).then((result) => {
+        console.log(result)
+     })
+    }, 5000);
+    //sspinnerWrapper.style.display = 'none';
 }
